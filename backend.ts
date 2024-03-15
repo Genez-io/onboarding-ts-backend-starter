@@ -18,7 +18,7 @@ export class BackendService {
   constructor() {}
 
   @GenezioMethod()
-  async hello(name: string) {
+  async hello(name: string): Promise<string> {
     const ipLocation: SuccessResponse | ErrorResponse = await fetch(
       "http://ip-api.com/json/"
     )
